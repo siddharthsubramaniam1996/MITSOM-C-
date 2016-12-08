@@ -1,39 +1,55 @@
-//SIMPLE PROGRAM TO CALCULATE VOLUME AND AREA OF CYLINDER WITHOUT USING INLINE//
+//SIMPLE PROGRAM TO CALCULATE PERIMETER AND AREA OF RECTANGLE WITHOUT USING INLINE//
 #include<iostream.h>
 #include<conio.h>
-class cylinder
+class rectangle
 {
-	float r,h;
+	float l,b;
 
 	public:                        //ACCESS SPECIFIER//
 		void getdata()
 		{
-			cout<<"\n enter the radius: ";
-			cin>>r;
-			cout<<"\n enter the height: ";
-			cin>>h;
+			cout<<"\n enter the length: ";
+			cin>>l;
+			cout<<"\n enter the breadth: ";
+			cin>>b;
 
-		//CAN BE WRITTEN AS 1 STATEMENT USING : cin>>r>>h//
+
+		//CAN BE WRITTEN AS 1 STATEMENT USING : cin>>l>>b//
 		}
 
 	void area()
 		{
-			cout<<"\n area of a cylinder is= \t"<<2*3.14*r*h;
+			cout<<"\n area of a rectangle is= \t"<<l*b;
 		}
 
-	void volume()
+	void perimeter()
 		{
-			cout<<"\n volume of cylinder is= \t"<<3.14*r*r*h;
+			cout<<"\n perimeter of rectangle is= \t"<<2*l*b;
 		}
 
+	void display()
+		{
+			cout<<"\n the length =\t"<<l;
+			cout<<"\n breadth is = \t"<<b;
+		}
 };
 
 void main()
 {
 	clrscr();
-	cylinder c;
-	c.getdata();
-	c.volume();
-	c.area();
+	rectangle r;
+	r.getdata();
+	r.perimeter();
+	r.area();
+
+	r.display();
+
+	rectangle r1;
+	r1.getdata();
+	r1.perimeter();
+	r1.area();
+		r1.display();
+
+
 	getch();
 }
